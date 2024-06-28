@@ -1,0 +1,493 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "%item%,%quantity%,a,for,i,need,quot": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,a,can,for,price,provid,you": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,a,for,give,me,pleas,quot": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,a,for,get,i,like,quot,to,would": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,for,i,inform,need,price": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,can,me,quot,you": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,cost,how,much,would": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%quantity%,for,is,price,the,what": {
+            "intent": "quote.request",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "quote.request": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "I need a quote for %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you provide a price for %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Please give me a quote for %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "I would like to get a quote for %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need pricing information for %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you quote me %quantity% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "How much would %quantity% %item% cost?",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is the price for %quantity% %item%?",
+            "intent": "quote.request"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "i": 1,
+              "need": 1,
+              "a": 1,
+              "quot": 1,
+              "for": 1,
+              "%quantity%": 1,
+              "%item%": 1,
+              "can": 1,
+              "you": 1,
+              "provid": 1,
+              "price": 1,
+              "pleas": 1,
+              "give": 1,
+              "me": 1,
+              "would": 1,
+              "like": 1,
+              "to": 1,
+              "get": 1,
+              "inform": 1,
+              "how": 1,
+              "much": 1,
+              "cost": 1,
+              "what": 1,
+              "is": 1,
+              "the": 1
+            },
+            "intents": {
+              "quote.request": 1
+            },
+            "intentFeatures": {
+              "quote.request": {
+                "i": 1,
+                "need": 1,
+                "a": 1,
+                "quot": 1,
+                "for": 1,
+                "%quantity%": 1,
+                "%item%": 1,
+                "can": 1,
+                "you": 1,
+                "provid": 1,
+                "price": 1,
+                "pleas": 1,
+                "give": 1,
+                "me": 1,
+                "would": 1,
+                "like": 1,
+                "to": 1,
+                "get": 1,
+                "inform": 1,
+                "how": 1,
+                "much": 1,
+                "cost": 1,
+                "what": 1,
+                "is": 1,
+                "the": 1
+              }
+            },
+            "featuresToIntent": {
+              "i": [
+                "quote.request"
+              ],
+              "need": [
+                "quote.request"
+              ],
+              "a": [
+                "quote.request"
+              ],
+              "quot": [
+                "quote.request"
+              ],
+              "for": [
+                "quote.request"
+              ],
+              "%quantity%": [
+                "quote.request"
+              ],
+              "%item%": [
+                "quote.request"
+              ],
+              "can": [
+                "quote.request"
+              ],
+              "you": [
+                "quote.request"
+              ],
+              "provid": [
+                "quote.request"
+              ],
+              "price": [
+                "quote.request"
+              ],
+              "pleas": [
+                "quote.request"
+              ],
+              "give": [
+                "quote.request"
+              ],
+              "me": [
+                "quote.request"
+              ],
+              "would": [
+                "quote.request"
+              ],
+              "like": [
+                "quote.request"
+              ],
+              "to": [
+                "quote.request"
+              ],
+              "get": [
+                "quote.request"
+              ],
+              "inform": [
+                "quote.request"
+              ],
+              "how": [
+                "quote.request"
+              ],
+              "much": [
+                "quote.request"
+              ],
+              "cost": [
+                "quote.request"
+              ],
+              "what": [
+                "quote.request"
+              ],
+              "is": [
+                "quote.request"
+              ],
+              "the": [
+                "quote.request"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "i",
+                "need",
+                "a",
+                "quot",
+                "for",
+                "%quantity%",
+                "%item%",
+                "can",
+                "you",
+                "provid",
+                "price",
+                "pleas",
+                "give",
+                "me",
+                "would",
+                "like",
+                "to",
+                "get",
+                "inform",
+                "how",
+                "much",
+                "cost",
+                "what",
+                "is",
+                "the"
+              ],
+              "intents": [
+                "quote.request"
+              ],
+              "perceptrons": [
+                [
+                  0.7286723852157593,
+                  0.7906347513198853,
+                  0.16530539095401764,
+                  1.4134069681167603,
+                  1.4809989929199219,
+                  3.8103649616241455,
+                  3.8103649616241455,
+                  1.002870798110962,
+                  1.002870798110962,
+                  -0.12196287512779236,
+                  1.1945418119430542,
+                  0.19822338223457336,
+                  0.19822338223457336,
+                  1.317906379699707,
+                  1.140212893486023,
+                  -0.061685752123594284,
+                  -0.061685752123594284,
+                  -0.061685752123594284,
+                  0.6390242576599121,
+                  1.2044739723205566,
+                  1.2044739723205566,
+                  1.2044739723205566,
+                  0.6857247352600098,
+                  0.6857247352600098,
+                  0.6857247352600098,
+                  1.905792950087006
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "I need a quote for %quantity% %item%"
+      ],
+      [
+        "en",
+        "Can you provide a price for %quantity% %item%"
+      ],
+      [
+        "en",
+        "Please give me a quote for %quantity% %item%"
+      ],
+      [
+        "en",
+        "I would like to get a quote for %quantity% %item%"
+      ],
+      [
+        "en",
+        "I need pricing information for %quantity% %item%"
+      ],
+      [
+        "en",
+        "Can you quote me %quantity% %item%"
+      ],
+      [
+        "en",
+        "How much would %quantity% %item% cost?"
+      ],
+      [
+        "en",
+        "What is the price for %quantity% %item%?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {
+      "en": {
+        "item": {
+          "name": "item",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "steel beams",
+              "texts": [
+                "steel beams",
+                "beams made of steel"
+              ]
+            },
+            {
+              "option": "aluminum sheets",
+              "texts": [
+                "aluminum sheets",
+                "sheets of aluminum"
+              ]
+            },
+            {
+              "option": "copper rods",
+              "texts": [
+                "copper rods",
+                "rods made of copper"
+              ]
+            },
+            {
+              "option": "iron plates",
+              "texts": [
+                "iron plates",
+                "plates made of iron"
+              ]
+            }
+          ]
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "50",
+              "texts": [
+                "50",
+                "fifty"
+              ]
+            },
+            {
+              "option": "100",
+              "texts": [
+                "100",
+                "one hundred"
+              ]
+            },
+            {
+              "option": "200",
+              "texts": [
+                "200",
+                "two hundred"
+              ]
+            },
+            {
+              "option": "500",
+              "texts": [
+                "500",
+                "five hundred"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "quote.request": [
+          {
+            "answer": "Sure, I can help with that."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "quote.request": {
+      "quantity": {
+        "intent": "quote.request",
+        "entity": "quantity",
+        "mandatory": false,
+        "locales": {}
+      },
+      "item": {
+        "intent": "quote.request",
+        "entity": "item",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  }
+}
