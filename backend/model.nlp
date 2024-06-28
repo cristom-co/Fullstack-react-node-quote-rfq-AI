@@ -35,109 +35,192 @@
           "useStemDict": true
         },
         "stemDict": {
-          "%item%,%number%,%unit%,a,for,i,need,quot": {
+          "%item%,%name%,%quantity%,%unit%,a,and,for,hi,i,is,my,name,need,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,a,can,for,price,provid,you": {
+          "%item%,%name%,%quantity%,%unit%,a,can,for,hello,is,price,provid,this,you": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,a,for,give,me,pleas,quot": {
+          "%item%,%name%,%quantity%,%unit%,a,am,day,for,give,good,i,me,pleas,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,a,for,get,i,like,quot,to,would": {
+          "%item%,%name%,%quantity%,%unit%,a,am,and,for,get,i,like,quot,to,would": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,for,i,inform,need,price": {
+          "%item%,%name%,%quantity%,%unit%,and,for,i,inform,is,my,name,need,price": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,can,me,quot,you": {
+          "%item%,%name%,%quantity%,%unit%,can,is,me,my,name,quot,you": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,cost,how,much,would": {
+          "%item%,%name%,%quantity%,%unit%,a,for,i,is,my,name,need,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,for,is,price,the,what": {
+          "%item%,%quantity%,%unit%,a,for,i,need,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,a,and,can,for,give,me,quot,you": {
-            "intent": "quote.request",
+          "%delivery_date%,by,deliv,item,need,the,we": {
+            "intent": "delivery.restriction",
             "domain": "default"
           },
-          "%item%,%number%,%unit%,a,and,for,i,need,quot": {
-            "intent": "quote.request",
+          "%delivery_date%,by,deliveri,ensur,pleas": {
+            "intent": "delivery.restriction",
             "domain": "default"
           },
-          "%name%,is,my,name": {
-            "intent": "quote.request",
+          "%delivery_date%,be,by,deliveri,done,should": {
+            "intent": "delivery.restriction",
+            "domain": "default"
+          },
+          "%delivery_date%,by,can,deliv,item,the,you": {
+            "intent": "delivery.restriction",
+            "domain": "default"
+          },
+          "%delivery_location%,deliv,i,item,need,the,to": {
+            "intent": "delivery.restriction",
+            "domain": "default"
+          },
+          "%delivery_location%,item,pleas,ship,the,to": {
+            "intent": "delivery.restriction",
+            "domain": "default"
+          },
+          "%delivery_location%,be,item,sent,should,the,to": {
+            "intent": "delivery.restriction",
+            "domain": "default"
+          },
+          "%phonenumber%,is,my,number,phone": {
+            "intent": "identify.phonenumber",
+            "domain": "default"
+          },
+          "%phonenumber%,at,call,me": {
+            "intent": "identify.phonenumber",
+            "domain": "default"
+          },
+          "%phonenumber%,at,can,me,reach,you": {
+            "intent": "identify.phonenumber",
+            "domain": "default"
+          },
+          "%phonenumber%,contact,me,on": {
+            "intent": "identify.phonenumber",
+            "domain": "default"
+          },
+          "%phonenumber%,at,out,reach": {
+            "intent": "identify.phonenumber",
             "domain": "default"
           }
         },
         "intentDict": {
-          "quote.request": "default"
+          "quote.request": "default",
+          "delivery.restriction": "default",
+          "identify.phonenumber": "default"
         },
         "sentences": [
           {
             "domain": "default",
-            "utterance": "I need a quote for %number% %unit% %item%",
+            "utterance": "Hi, my name is %name% and I need a quote for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Can you provide a price for %number% %unit% %item%",
+            "utterance": "Hello, this is %name%. Can you provide a price for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Please give me a quote for %number% %unit% %item%",
+            "utterance": "Good day, I am %name%. Please give me a quote for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "I would like to get a quote for %number% %unit% %item%",
+            "utterance": "I am %name% and I would like to get a quote for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "I need pricing information for %number% %unit% %item%",
+            "utterance": "My name is %name% and I need pricing information for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Can you quote me %number% %unit% %item%",
+            "utterance": "Can you quote me %quantity% %unit% %item%? My name is %name%.",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "How much would %number% %unit% %item% cost?",
+            "utterance": "I need a quote for %quantity% %unit% %item%. My name is %name%.",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "What is the price for %number% %unit% %item%?",
+            "utterance": "I need a quote for %quantity% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Can you give me a quote for %number% %unit% %item% and %number% %unit% %item%?",
-            "intent": "quote.request"
+            "utterance": "We need the items delivered by %delivery_date%",
+            "intent": "delivery.restriction"
           },
           {
             "domain": "default",
-            "utterance": "I need a quote for %number% %unit% %item% and %number% %unit% %item%",
-            "intent": "quote.request"
+            "utterance": "Please ensure delivery by %delivery_date%",
+            "intent": "delivery.restriction"
           },
           {
             "domain": "default",
-            "utterance": "my name is %name%",
-            "intent": "quote.request"
+            "utterance": "Delivery should be done by %delivery_date%",
+            "intent": "delivery.restriction"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you deliver the items by %delivery_date%?",
+            "intent": "delivery.restriction"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need the items delivered to %delivery_location%",
+            "intent": "delivery.restriction"
+          },
+          {
+            "domain": "default",
+            "utterance": "Please ship the items to %delivery_location%",
+            "intent": "delivery.restriction"
+          },
+          {
+            "domain": "default",
+            "utterance": "The items should be sent to %delivery_location%",
+            "intent": "delivery.restriction"
+          },
+          {
+            "domain": "default",
+            "utterance": "My phone number is %phonenumber%",
+            "intent": "identify.phonenumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "Call me at %phonenumber%",
+            "intent": "identify.phonenumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "You can reach me at %phonenumber%",
+            "intent": "identify.phonenumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "Contact me on %phonenumber%",
+            "intent": "identify.phonenumber"
+          },
+          {
+            "domain": "default",
+            "utterance": "Reach out at %phonenumber%",
+            "intent": "identify.phonenumber"
           }
         ],
         "domains": {
@@ -154,18 +237,29 @@
               "log": true
             },
             "features": {
+              "hi": 1,
+              "my": 1,
+              "name": 1,
+              "is": 1,
+              "%name%": 1,
+              "and": 1,
               "i": 1,
               "need": 1,
               "a": 1,
               "quot": 1,
               "for": 1,
-              "%number%": 1,
+              "%quantity%": 1,
               "%unit%": 1,
               "%item%": 1,
+              "hello": 1,
+              "this": 1,
               "can": 1,
               "you": 1,
               "provid": 1,
               "price": 1,
+              "good": 1,
+              "day": 1,
+              "am": 1,
               "pleas": 1,
               "give": 1,
               "me": 1,
@@ -174,34 +268,60 @@
               "to": 1,
               "get": 1,
               "inform": 1,
-              "how": 1,
-              "much": 1,
-              "cost": 1,
-              "what": 1,
-              "is": 1,
+              "we": 1,
               "the": 1,
-              "and": 1,
-              "my": 1,
-              "name": 1,
-              "%name%": 1
+              "item": 1,
+              "deliv": 1,
+              "by": 1,
+              "%delivery_date%": 1,
+              "ensur": 1,
+              "deliveri": 1,
+              "should": 1,
+              "be": 1,
+              "done": 1,
+              "%delivery_location%": 1,
+              "ship": 1,
+              "sent": 1,
+              "phone": 1,
+              "number": 1,
+              "%phonenumber%": 1,
+              "call": 1,
+              "at": 1,
+              "reach": 1,
+              "contact": 1,
+              "on": 1,
+              "out": 1
             },
             "intents": {
-              "quote.request": 1
+              "quote.request": 1,
+              "delivery.restriction": 1,
+              "identify.phonenumber": 1
             },
             "intentFeatures": {
               "quote.request": {
+                "hi": 1,
+                "my": 1,
+                "name": 1,
+                "is": 1,
+                "%name%": 1,
+                "and": 1,
                 "i": 1,
                 "need": 1,
                 "a": 1,
                 "quot": 1,
                 "for": 1,
-                "%number%": 1,
+                "%quantity%": 1,
                 "%unit%": 1,
                 "%item%": 1,
+                "hello": 1,
+                "this": 1,
                 "can": 1,
                 "you": 1,
                 "provid": 1,
                 "price": 1,
+                "good": 1,
+                "day": 1,
+                "am": 1,
                 "pleas": 1,
                 "give": 1,
                 "me": 1,
@@ -209,25 +329,75 @@
                 "like": 1,
                 "to": 1,
                 "get": 1,
-                "inform": 1,
-                "how": 1,
-                "much": 1,
-                "cost": 1,
-                "what": 1,
-                "is": 1,
+                "inform": 1
+              },
+              "delivery.restriction": {
+                "we": 1,
+                "need": 1,
                 "the": 1,
-                "and": 1,
+                "item": 1,
+                "deliv": 1,
+                "by": 1,
+                "%delivery_date%": 1,
+                "pleas": 1,
+                "ensur": 1,
+                "deliveri": 1,
+                "should": 1,
+                "be": 1,
+                "done": 1,
+                "can": 1,
+                "you": 1,
+                "i": 1,
+                "to": 1,
+                "%delivery_location%": 1,
+                "ship": 1,
+                "sent": 1
+              },
+              "identify.phonenumber": {
                 "my": 1,
-                "name": 1,
-                "%name%": 1
+                "phone": 1,
+                "number": 1,
+                "is": 1,
+                "%phonenumber%": 1,
+                "call": 1,
+                "me": 1,
+                "at": 1,
+                "you": 1,
+                "can": 1,
+                "reach": 1,
+                "contact": 1,
+                "on": 1,
+                "out": 1
               }
             },
             "featuresToIntent": {
-              "i": [
+              "hi": [
                 "quote.request"
               ],
-              "need": [
+              "my": [
+                "quote.request",
+                "identify.phonenumber"
+              ],
+              "name": [
                 "quote.request"
+              ],
+              "is": [
+                "quote.request",
+                "identify.phonenumber"
+              ],
+              "%name%": [
+                "quote.request"
+              ],
+              "and": [
+                "quote.request"
+              ],
+              "i": [
+                "quote.request",
+                "delivery.restriction"
+              ],
+              "need": [
+                "quote.request",
+                "delivery.restriction"
               ],
               "a": [
                 "quote.request"
@@ -238,7 +408,7 @@
               "for": [
                 "quote.request"
               ],
-              "%number%": [
+              "%quantity%": [
                 "quote.request"
               ],
               "%unit%": [
@@ -247,11 +417,21 @@
               "%item%": [
                 "quote.request"
               ],
-              "can": [
+              "hello": [
                 "quote.request"
               ],
-              "you": [
+              "this": [
                 "quote.request"
+              ],
+              "can": [
+                "quote.request",
+                "delivery.restriction",
+                "identify.phonenumber"
+              ],
+              "you": [
+                "quote.request",
+                "delivery.restriction",
+                "identify.phonenumber"
               ],
               "provid": [
                 "quote.request"
@@ -259,14 +439,25 @@
               "price": [
                 "quote.request"
               ],
-              "pleas": [
+              "good": [
                 "quote.request"
+              ],
+              "day": [
+                "quote.request"
+              ],
+              "am": [
+                "quote.request"
+              ],
+              "pleas": [
+                "quote.request",
+                "delivery.restriction"
               ],
               "give": [
                 "quote.request"
               ],
               "me": [
-                "quote.request"
+                "quote.request",
+                "identify.phonenumber"
               ],
               "would": [
                 "quote.request"
@@ -275,7 +466,8 @@
                 "quote.request"
               ],
               "to": [
-                "quote.request"
+                "quote.request",
+                "delivery.restriction"
               ],
               "get": [
                 "quote.request"
@@ -283,35 +475,74 @@
               "inform": [
                 "quote.request"
               ],
-              "how": [
-                "quote.request"
-              ],
-              "much": [
-                "quote.request"
-              ],
-              "cost": [
-                "quote.request"
-              ],
-              "what": [
-                "quote.request"
-              ],
-              "is": [
-                "quote.request"
+              "we": [
+                "delivery.restriction"
               ],
               "the": [
-                "quote.request"
+                "delivery.restriction"
               ],
-              "and": [
-                "quote.request"
+              "item": [
+                "delivery.restriction"
               ],
-              "my": [
-                "quote.request"
+              "deliv": [
+                "delivery.restriction"
               ],
-              "name": [
-                "quote.request"
+              "by": [
+                "delivery.restriction"
               ],
-              "%name%": [
-                "quote.request"
+              "%delivery_date%": [
+                "delivery.restriction"
+              ],
+              "ensur": [
+                "delivery.restriction"
+              ],
+              "deliveri": [
+                "delivery.restriction"
+              ],
+              "should": [
+                "delivery.restriction"
+              ],
+              "be": [
+                "delivery.restriction"
+              ],
+              "done": [
+                "delivery.restriction"
+              ],
+              "%delivery_location%": [
+                "delivery.restriction"
+              ],
+              "ship": [
+                "delivery.restriction"
+              ],
+              "sent": [
+                "delivery.restriction"
+              ],
+              "phone": [
+                "identify.phonenumber"
+              ],
+              "number": [
+                "identify.phonenumber"
+              ],
+              "%phonenumber%": [
+                "identify.phonenumber"
+              ],
+              "call": [
+                "identify.phonenumber"
+              ],
+              "at": [
+                "identify.phonenumber"
+              ],
+              "reach": [
+                "identify.phonenumber"
+              ],
+              "contact": [
+                "identify.phonenumber"
+              ],
+              "on": [
+                "identify.phonenumber"
+              ],
+              "out": [
+                "identify.phonenumber"
               ]
             },
             "neuralNetwork": {
@@ -327,18 +558,29 @@
                 "log": true
               },
               "features": [
+                "hi",
+                "my",
+                "name",
+                "is",
+                "%name%",
+                "and",
                 "i",
                 "need",
                 "a",
                 "quot",
                 "for",
-                "%number%",
+                "%quantity%",
                 "%unit%",
                 "%item%",
+                "hello",
+                "this",
                 "can",
                 "you",
                 "provid",
                 "price",
+                "good",
+                "day",
+                "am",
                 "pleas",
                 "give",
                 "me",
@@ -347,53 +589,206 @@
                 "to",
                 "get",
                 "inform",
-                "how",
-                "much",
-                "cost",
-                "what",
-                "is",
+                "we",
                 "the",
-                "and",
-                "my",
-                "name",
-                "%name%"
+                "item",
+                "deliv",
+                "by",
+                "%delivery_date%",
+                "ensur",
+                "deliveri",
+                "should",
+                "be",
+                "done",
+                "%delivery_location%",
+                "ship",
+                "sent",
+                "phone",
+                "number",
+                "%phonenumber%",
+                "call",
+                "at",
+                "reach",
+                "contact",
+                "on",
+                "out"
               ],
               "intents": [
-                "quote.request"
+                "quote.request",
+                "delivery.restriction",
+                "identify.phonenumber"
               ],
               "perceptrons": [
                 [
-                  0.7456121444702148,
-                  0.8024694919586182,
-                  0.31736835837364197,
-                  1.1201707124710083,
-                  0.5665724277496338,
-                  2.7041187286376953,
-                  2.7041187286376953,
-                  2.7041187286376953,
-                  0.6278993487358093,
-                  0.6278993487358093,
-                  0.4769273102283478,
-                  0.7292944192886353,
-                  0.7656033635139465,
-                  -0.36304569244384766,
-                  0.9187957644462585,
-                  0.7986131906509399,
-                  -0.05665106326341629,
-                  -0.05665106326341629,
-                  -0.05665106326341629,
-                  0.5427819490432739,
-                  0.8553572297096252,
-                  0.8553572297096252,
-                  0.8553572297096252,
-                  -0.2922389805316925,
-                  2.6458449363708496,
-                  -0.2922389805316925,
-                  -0.33848974108695984,
-                  2.9385275840759277,
-                  2.9385275840759277,
-                  2.9385275840759277,
-                  2.8239914785820868
+                  -0.7164543271064758,
+                  -0.09704376012086868,
+                  0.2284170687198639,
+                  0.06235376372933388,
+                  0.4658184349536896,
+                  0.16672790050506592,
+                  0.8362257480621338,
+                  0.6712814569473267,
+                  0.4189058840274811,
+                  1.9276586771011353,
+                  1.1781104803085327,
+                  2.8469645977020264,
+                  2.8469645977020264,
+                  2.8469645977020264,
+                  0.1617652177810669,
+                  0.1617652177810669,
+                  0.8892205357551575,
+                  0.8892205357551575,
+                  0.1617652177810669,
+                  0.9159966111183167,
+                  -0.031632211059331894,
+                  -0.031632211059331894,
+                  0.08097957074642181,
+                  -0.25948241353034973,
+                  -0.031632211059331894,
+                  0.7025962471961975,
+                  0.11499936878681183,
+                  0.11499936878681183,
+                  -0.1513267606496811,
+                  0.11499936878681183,
+                  0.7532118558883667,
+                  -0.042884115129709244,
+                  -0.554773211479187,
+                  -0.554773211479187,
+                  -0.46927616000175476,
+                  -0.4493362009525299,
+                  -0.4493362009525299,
+                  -0.10090603679418564,
+                  -0.15953484177589417,
+                  -0.0294186994433403,
+                  -0.0294186994433403,
+                  -0.0294186994433403,
+                  -0.25893619656562805,
+                  -0.06161646544933319,
+                  0,
+                  -0.3009067177772522,
+                  -0.3009067177772522,
+                  -1.2514193058013916,
+                  -0.08813971281051636,
+                  -0.8454122543334961,
+                  -0.7217528223991394,
+                  -0.05643186345696449,
+                  -0.05643186345696449,
+                  0,
+                  0.41256337136803567
+                ],
+                [
+                  -0.12306775152683258,
+                  -0.38730406761169434,
+                  -0.12306775152683258,
+                  -0.5600187182426453,
+                  -0.6201311349868774,
+                  -0.3164016008377075,
+                  0.8402466773986816,
+                  0.6658027768135071,
+                  -0.6349233984947205,
+                  -0.4645034670829773,
+                  -0.6349233984947205,
+                  -0.6349233984947205,
+                  -0.6349233984947205,
+                  -0.6349233984947205,
+                  -0.08558578789234161,
+                  -0.08558578789234161,
+                  0.11450904607772827,
+                  0.11450904607772827,
+                  -0.08558578789234161,
+                  -0.08558578789234161,
+                  -0.06739703565835953,
+                  -0.06739703565835953,
+                  -0.21201901137828827,
+                  2.25184965133667,
+                  -0.06739703565835953,
+                  -0.7290709614753723,
+                  -0.08564957231283188,
+                  -0.08564957231283188,
+                  2.222182512283325,
+                  -0.08564957231283188,
+                  0,
+                  -0.4070799648761749,
+                  2.4729347229003906,
+                  2.4729347229003906,
+                  1.473583698272705,
+                  2.916896104812622,
+                  2.916896104812622,
+                  1.6349797248840332,
+                  2.765118360519409,
+                  1.377536654472351,
+                  1.377536654472351,
+                  1.1295589208602905,
+                  2.3211371898651123,
+                  0.7517224550247192,
+                  0.2478267401456833,
+                  -0.17556436359882355,
+                  -0.17556436359882355,
+                  -0.967373788356781,
+                  -0.1543598771095276,
+                  -0.5623040199279785,
+                  -0.3438810110092163,
+                  -0.10726561397314072,
+                  -0.10726561397314072,
+                  -0.08147653937339783,
+                  1.7988595942241157
+                ],
+                [
+                  -0.08413995802402496,
+                  1.1196093559265137,
+                  -0.6874487400054932,
+                  0.9265246987342834,
+                  -1.124515175819397,
+                  -0.08413995802402496,
+                  -0.3753845989704132,
+                  -0.28573036193847656,
+                  -0.49675503373146057,
+                  -0.9322816729545593,
+                  -0.49675503373146057,
+                  -1.124515175819397,
+                  -1.124515175819397,
+                  -1.124515175819397,
+                  -0.09654230624437332,
+                  -0.09654230624437332,
+                  -0.4826357364654541,
+                  -0.4826357364654541,
+                  -0.09654230624437332,
+                  -0.09654230624437332,
+                  -0.17004357278347015,
+                  -0.17004357278347015,
+                  -0.17004357278347015,
+                  -0.5009332895278931,
+                  -0.17004357278347015,
+                  2.298189640045166,
+                  0,
+                  0,
+                  -0.23134589195251465,
+                  0,
+                  0,
+                  -0.09131037443876266,
+                  -0.5553435683250427,
+                  -0.5553435683250427,
+                  -0.31299713253974915,
+                  -0.6301990747451782,
+                  -0.6301990747451782,
+                  -0.13506117463111877,
+                  -0.30525243282318115,
+                  -0.24222426116466522,
+                  -0.24222426116466522,
+                  -0.1353641301393509,
+                  -0.23134589195251465,
+                  -0.0964861661195755,
+                  -0.08918417245149612,
+                  1.8892347812652588,
+                  1.8892347812652588,
+                  6.332277774810791,
+                  0.8683518767356873,
+                  2.6830973625183105,
+                  1.8174982070922852,
+                  1.7587013244628906,
+                  1.7587013244628906,
+                  1.3044638633728027,
+                  2.1291074210504077
                 ]
               ]
             }
@@ -405,47 +800,83 @@
     "extraSentences": [
       [
         "en",
-        "I need a quote for %number% %unit% %item%"
+        "Hi, my name is %name% and I need a quote for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "Can you provide a price for %number% %unit% %item%"
+        "Hello, this is %name%. Can you provide a price for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "Please give me a quote for %number% %unit% %item%"
+        "Good day, I am %name%. Please give me a quote for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "I would like to get a quote for %number% %unit% %item%"
+        "I am %name% and I would like to get a quote for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "I need pricing information for %number% %unit% %item%"
+        "My name is %name% and I need pricing information for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "Can you quote me %number% %unit% %item%"
+        "Can you quote me %quantity% %unit% %item%? My name is %name%."
       ],
       [
         "en",
-        "How much would %number% %unit% %item% cost?"
+        "I need a quote for %quantity% %unit% %item%. My name is %name%."
       ],
       [
         "en",
-        "What is the price for %number% %unit% %item%?"
+        "I need a quote for %quantity% %unit% %item%"
       ],
       [
         "en",
-        "Can you give me a quote for %number% %unit% %item% and %number% %unit% %item%?"
+        "We need the items delivered by %delivery_date%"
       ],
       [
         "en",
-        "I need a quote for %number% %unit% %item% and %number% %unit% %item%"
+        "Please ensure delivery by %delivery_date%"
       ],
       [
         "en",
-        "my name is %name%"
+        "Delivery should be done by %delivery_date%"
+      ],
+      [
+        "en",
+        "Can you deliver the items by %delivery_date%?"
+      ],
+      [
+        "en",
+        "I need the items delivered to %delivery_location%"
+      ],
+      [
+        "en",
+        "Please ship the items to %delivery_location%"
+      ],
+      [
+        "en",
+        "The items should be sent to %delivery_location%"
+      ],
+      [
+        "en",
+        "My phone number is %phonenumber%"
+      ],
+      [
+        "en",
+        "Call me at %phonenumber%"
+      ],
+      [
+        "en",
+        "You can reach me at %phonenumber%"
+      ],
+      [
+        "en",
+        "Contact me on %phonenumber%"
+      ],
+      [
+        "en",
+        "Reach out at %phonenumber%"
       ]
     ]
   },
@@ -521,6 +952,76 @@
               ]
             }
           ]
+        },
+        "delivery_date": {
+          "name": "delivery_date",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "by end of month",
+              "texts": [
+                "by end of month",
+                "by the end of this month"
+              ]
+            },
+            {
+              "option": "by next Friday",
+              "texts": [
+                "by next Friday",
+                "by Friday next week"
+              ]
+            },
+            {
+              "option": "by the end of the week",
+              "texts": [
+                "by the end of the week",
+                "by end of week"
+              ]
+            },
+            {
+              "option": "by June 30th",
+              "texts": [
+                "by June 30th",
+                "by the 30th of June"
+              ]
+            }
+          ]
+        },
+        "delivery_location": {
+          "name": "delivery_location",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "New York",
+              "texts": [
+                "New York",
+                "NYC",
+                "NY"
+              ]
+            },
+            {
+              "option": "Los Angeles",
+              "texts": [
+                "Los Angeles",
+                "LA",
+                "L.A."
+              ]
+            },
+            {
+              "option": "Chicago",
+              "texts": [
+                "Chicago",
+                "CHI"
+              ]
+            },
+            {
+              "option": "Houston",
+              "texts": [
+                "Houston",
+                "HOU"
+              ]
+            }
+          ]
         }
       }
     }
@@ -535,6 +1036,11 @@
           {
             "answer": "Sure, I can help with that."
           }
+        ],
+        "delivery.restriction": [
+          {
+            "answer": "I will note the delivery restrictions."
+          }
         ]
       }
     }
@@ -547,9 +1053,15 @@
   },
   "slotManager": {
     "quote.request": {
-      "number": {
+      "name": {
         "intent": "quote.request",
-        "entity": "number",
+        "entity": "name",
+        "mandatory": false,
+        "locales": {}
+      },
+      "quantity": {
+        "intent": "quote.request",
+        "entity": "quantity",
         "mandatory": false,
         "locales": {}
       },
@@ -564,10 +1076,26 @@
         "entity": "item",
         "mandatory": false,
         "locales": {}
+      }
+    },
+    "delivery.restriction": {
+      "delivery_date": {
+        "intent": "delivery.restriction",
+        "entity": "delivery_date",
+        "mandatory": false,
+        "locales": {}
       },
-      "name": {
-        "intent": "quote.request",
-        "entity": "name",
+      "delivery_location": {
+        "intent": "delivery.restriction",
+        "entity": "delivery_location",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "identify.phonenumber": {
+      "phonenumber": {
+        "intent": "identify.phonenumber",
+        "entity": "phonenumber",
         "mandatory": false,
         "locales": {}
       }

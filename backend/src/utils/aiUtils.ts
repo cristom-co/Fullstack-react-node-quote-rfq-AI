@@ -1,8 +1,7 @@
 import documents from "./training/documents";
-import entities from "./training/entities";
+import {entities} from "./training/entities";
 
 const { NlpManager } = require("node-nlp");
-
 const manager = new NlpManager({ languages: ["en"], forceNER: true });
 
 documents.map((document) => {
@@ -14,6 +13,7 @@ entities.map((entity) => {
 });
 
 manager.addAnswer("en", "quote.request", "Sure, I can help with that.");
+manager.addAnswer('en', 'delivery.restriction', 'I will note the delivery restrictions.');
 
 (async function trainAndSave() {
   await manager.train();
@@ -25,7 +25,8 @@ export async function processEmail(emailText: any) {
   const { classifications, entities } = response;
   let status = false;
 
-  if (classifications[0].intent === "quote.request") {
+  let validate = classifications.find((item: any) => item.intent === "quote.request")
+  if (validate) {
     status = true;
   }
 
