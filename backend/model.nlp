@@ -35,35 +35,47 @@
           "useStemDict": true
         },
         "stemDict": {
-          "%item%,%quantity%,a,for,i,need,quot": {
+          "%item%,%number%,%unit%,a,for,i,need,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,a,can,for,price,provid,you": {
+          "%item%,%number%,%unit%,a,can,for,price,provid,you": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,a,for,give,me,pleas,quot": {
+          "%item%,%number%,%unit%,a,for,give,me,pleas,quot": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,a,for,get,i,like,quot,to,would": {
+          "%item%,%number%,%unit%,a,for,get,i,like,quot,to,would": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,for,i,inform,need,price": {
+          "%item%,%number%,%unit%,for,i,inform,need,price": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,can,me,quot,you": {
+          "%item%,%number%,%unit%,can,me,quot,you": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,cost,how,much,would": {
+          "%item%,%number%,%unit%,cost,how,much,would": {
             "intent": "quote.request",
             "domain": "default"
           },
-          "%item%,%quantity%,for,is,price,the,what": {
+          "%item%,%number%,%unit%,for,is,price,the,what": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%number%,%unit%,a,and,can,for,give,me,quot,you": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%item%,%number%,%unit%,a,and,for,i,need,quot": {
+            "intent": "quote.request",
+            "domain": "default"
+          },
+          "%name%,is,my,name": {
             "intent": "quote.request",
             "domain": "default"
           }
@@ -74,42 +86,57 @@
         "sentences": [
           {
             "domain": "default",
-            "utterance": "I need a quote for %quantity% %item%",
+            "utterance": "I need a quote for %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Can you provide a price for %quantity% %item%",
+            "utterance": "Can you provide a price for %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Please give me a quote for %quantity% %item%",
+            "utterance": "Please give me a quote for %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "I would like to get a quote for %quantity% %item%",
+            "utterance": "I would like to get a quote for %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "I need pricing information for %quantity% %item%",
+            "utterance": "I need pricing information for %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "Can you quote me %quantity% %item%",
+            "utterance": "Can you quote me %number% %unit% %item%",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "How much would %quantity% %item% cost?",
+            "utterance": "How much would %number% %unit% %item% cost?",
             "intent": "quote.request"
           },
           {
             "domain": "default",
-            "utterance": "What is the price for %quantity% %item%?",
+            "utterance": "What is the price for %number% %unit% %item%?",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you give me a quote for %number% %unit% %item% and %number% %unit% %item%?",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need a quote for %number% %unit% %item% and %number% %unit% %item%",
+            "intent": "quote.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "my name is %name%",
             "intent": "quote.request"
           }
         ],
@@ -132,7 +159,8 @@
               "a": 1,
               "quot": 1,
               "for": 1,
-              "%quantity%": 1,
+              "%number%": 1,
+              "%unit%": 1,
               "%item%": 1,
               "can": 1,
               "you": 1,
@@ -151,7 +179,11 @@
               "cost": 1,
               "what": 1,
               "is": 1,
-              "the": 1
+              "the": 1,
+              "and": 1,
+              "my": 1,
+              "name": 1,
+              "%name%": 1
             },
             "intents": {
               "quote.request": 1
@@ -163,7 +195,8 @@
                 "a": 1,
                 "quot": 1,
                 "for": 1,
-                "%quantity%": 1,
+                "%number%": 1,
+                "%unit%": 1,
                 "%item%": 1,
                 "can": 1,
                 "you": 1,
@@ -182,7 +215,11 @@
                 "cost": 1,
                 "what": 1,
                 "is": 1,
-                "the": 1
+                "the": 1,
+                "and": 1,
+                "my": 1,
+                "name": 1,
+                "%name%": 1
               }
             },
             "featuresToIntent": {
@@ -201,7 +238,10 @@
               "for": [
                 "quote.request"
               ],
-              "%quantity%": [
+              "%number%": [
+                "quote.request"
+              ],
+              "%unit%": [
                 "quote.request"
               ],
               "%item%": [
@@ -260,6 +300,18 @@
               ],
               "the": [
                 "quote.request"
+              ],
+              "and": [
+                "quote.request"
+              ],
+              "my": [
+                "quote.request"
+              ],
+              "name": [
+                "quote.request"
+              ],
+              "%name%": [
+                "quote.request"
               ]
             },
             "neuralNetwork": {
@@ -280,7 +332,8 @@
                 "a",
                 "quot",
                 "for",
-                "%quantity%",
+                "%number%",
+                "%unit%",
                 "%item%",
                 "can",
                 "you",
@@ -299,39 +352,48 @@
                 "cost",
                 "what",
                 "is",
-                "the"
+                "the",
+                "and",
+                "my",
+                "name",
+                "%name%"
               ],
               "intents": [
                 "quote.request"
               ],
               "perceptrons": [
                 [
-                  0.7286723852157593,
-                  0.7906347513198853,
-                  0.16530539095401764,
-                  1.4134069681167603,
-                  1.4809989929199219,
-                  3.8103649616241455,
-                  3.8103649616241455,
-                  1.002870798110962,
-                  1.002870798110962,
-                  -0.12196287512779236,
-                  1.1945418119430542,
-                  0.19822338223457336,
-                  0.19822338223457336,
-                  1.317906379699707,
-                  1.140212893486023,
-                  -0.061685752123594284,
-                  -0.061685752123594284,
-                  -0.061685752123594284,
-                  0.6390242576599121,
-                  1.2044739723205566,
-                  1.2044739723205566,
-                  1.2044739723205566,
-                  0.6857247352600098,
-                  0.6857247352600098,
-                  0.6857247352600098,
-                  1.905792950087006
+                  0.7456121444702148,
+                  0.8024694919586182,
+                  0.31736835837364197,
+                  1.1201707124710083,
+                  0.5665724277496338,
+                  2.7041187286376953,
+                  2.7041187286376953,
+                  2.7041187286376953,
+                  0.6278993487358093,
+                  0.6278993487358093,
+                  0.4769273102283478,
+                  0.7292944192886353,
+                  0.7656033635139465,
+                  -0.36304569244384766,
+                  0.9187957644462585,
+                  0.7986131906509399,
+                  -0.05665106326341629,
+                  -0.05665106326341629,
+                  -0.05665106326341629,
+                  0.5427819490432739,
+                  0.8553572297096252,
+                  0.8553572297096252,
+                  0.8553572297096252,
+                  -0.2922389805316925,
+                  2.6458449363708496,
+                  -0.2922389805316925,
+                  -0.33848974108695984,
+                  2.9385275840759277,
+                  2.9385275840759277,
+                  2.9385275840759277,
+                  2.8239914785820868
                 ]
               ]
             }
@@ -343,35 +405,47 @@
     "extraSentences": [
       [
         "en",
-        "I need a quote for %quantity% %item%"
+        "I need a quote for %number% %unit% %item%"
       ],
       [
         "en",
-        "Can you provide a price for %quantity% %item%"
+        "Can you provide a price for %number% %unit% %item%"
       ],
       [
         "en",
-        "Please give me a quote for %quantity% %item%"
+        "Please give me a quote for %number% %unit% %item%"
       ],
       [
         "en",
-        "I would like to get a quote for %quantity% %item%"
+        "I would like to get a quote for %number% %unit% %item%"
       ],
       [
         "en",
-        "I need pricing information for %quantity% %item%"
+        "I need pricing information for %number% %unit% %item%"
       ],
       [
         "en",
-        "Can you quote me %quantity% %item%"
+        "Can you quote me %number% %unit% %item%"
       ],
       [
         "en",
-        "How much would %quantity% %item% cost?"
+        "How much would %number% %unit% %item% cost?"
       ],
       [
         "en",
-        "What is the price for %quantity% %item%?"
+        "What is the price for %number% %unit% %item%?"
+      ],
+      [
+        "en",
+        "Can you give me a quote for %number% %unit% %item% and %number% %unit% %item%?"
+      ],
+      [
+        "en",
+        "I need a quote for %number% %unit% %item% and %number% %unit% %item%"
+      ],
+      [
+        "en",
+        "my name is %name%"
       ]
     ]
   },
@@ -417,36 +491,33 @@
             }
           ]
         },
-        "quantity": {
-          "name": "quantity",
+        "unit": {
+          "name": "unit",
           "type": "enum",
           "rules": [
             {
-              "option": "50",
+              "option": "pieces",
               "texts": [
-                "50",
-                "fifty"
+                "pieces",
+                "pcs"
               ]
             },
             {
-              "option": "100",
+              "option": "sheets",
               "texts": [
-                "100",
-                "one hundred"
+                "sheets"
               ]
             },
             {
-              "option": "200",
+              "option": "rods",
               "texts": [
-                "200",
-                "two hundred"
+                "rods"
               ]
             },
             {
-              "option": "500",
+              "option": "plates",
               "texts": [
-                "500",
-                "five hundred"
+                "plates"
               ]
             }
           ]
@@ -476,15 +547,27 @@
   },
   "slotManager": {
     "quote.request": {
-      "quantity": {
+      "number": {
         "intent": "quote.request",
-        "entity": "quantity",
+        "entity": "number",
+        "mandatory": false,
+        "locales": {}
+      },
+      "unit": {
+        "intent": "quote.request",
+        "entity": "unit",
         "mandatory": false,
         "locales": {}
       },
       "item": {
         "intent": "quote.request",
         "entity": "item",
+        "mandatory": false,
+        "locales": {}
+      },
+      "name": {
+        "intent": "quote.request",
+        "entity": "name",
         "mandatory": false,
         "locales": {}
       }
