@@ -5,7 +5,7 @@ import {
   getProductEntities,
 } from "../utils/rfqUtils";
 
-import { getAllProducts, seederProducts } from "../services/rfqService";
+import { seederProducts, findProductIfExist, createQoute, getAllQuotes } from "../services/rfqService";
 
 export const handleRfq = async (req: Request, res: Response) => {
   const { body } = req.body;
@@ -14,13 +14,13 @@ export const handleRfq = async (req: Request, res: Response) => {
   let client = getClientEntities(responseProcessEmail, body)
   let products = getProductEntities(responseProcessEmail.entities, client)
 
-  //inserta los productos...
-  seederProducts().then(() => {
-    //validar si hay existencias
-
+  // insert default products
+  seederProducts().then(async() => {
+    //valid if the product exists
+    const currentProducts = await findProductIfExist(products)
+    //store quote
+    await createQoute(client, currentProducts);
    });
-   
-  //guardar posibles cotizaciones
 
   if (responseProcessEmail.status) {
     res
@@ -30,3 +30,16 @@ export const handleRfq = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Error processing RFQs" });
   }
 };
+
+export const handleQoutes = async (req: Request, res: Response) => {
+  const qoutes = await getAllQuotes()
+  try {
+    res
+    .status(200)
+    .json({ message: "Qoute list", qoutes });
+  } catch (error) {
+    res.status(500).json({ message: "Error Quotes" });
+    
+  }
+
+}
