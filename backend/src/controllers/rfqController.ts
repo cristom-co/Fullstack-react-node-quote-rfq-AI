@@ -10,19 +10,20 @@ import { seederProducts, findProductIfExist, createQoute, getAllQuotes } from ".
 export const handleRfq = async (req: Request, res: Response) => {
   const { body } = req.body;
   const responseProcessEmail = await processEmail(body);
-  
-  let client = getClientEntities(responseProcessEmail, body)
-  let products = getProductEntities(responseProcessEmail.entities, client)
-
-  // insert default products
-  seederProducts().then(async() => {
-    //valid if the product exists
-    const currentProducts = await findProductIfExist(products)
-    //store quote
-    await createQoute(client, currentProducts);
-   });
 
   if (responseProcessEmail.status) {
+  
+    let client = getClientEntities(responseProcessEmail, body)
+    let products = getProductEntities(responseProcessEmail.entities, client)
+  
+    // insert default products
+    seederProducts().then(async() => {
+      //valid if the product exists
+      const currentProducts = await findProductIfExist(products)
+      //store quote
+      await createQoute(client, currentProducts);
+     });
+
     res
       .status(200)
       .json({ message: "RFQ processed successfully", client, products });

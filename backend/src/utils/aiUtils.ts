@@ -22,11 +22,10 @@ manager.addAnswer('en', 'delivery.restriction', 'I will note the delivery restri
 
 export async function processEmail(emailText: any) {
   const response = await manager.process("en", emailText);
-  const { classifications, entities } = response;
+  const { intent, entities } = response;
   let status = false;
 
-  let validate = classifications.find((item: any) => item.intent === "quote.request")
-  if (validate) {
+  if (intent === "quote.request" ) {
     status = true;
   }
 

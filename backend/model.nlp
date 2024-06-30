@@ -68,58 +68,56 @@
             "domain": "default"
           },
           "%delivery_date%,by,deliv,item,need,the,we": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_date%,by,deliveri,ensur,pleas": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_date%,be,by,deliveri,done,should": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_date%,by,can,deliv,item,the,you": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_location%,deliv,i,item,need,the,to": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_location%,item,pleas,ship,the,to": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%delivery_location%,be,item,sent,should,the,to": {
-            "intent": "delivery.restriction",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%phonenumber%,is,my,number,phone": {
-            "intent": "identify.phonenumber",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%phonenumber%,at,call,me": {
-            "intent": "identify.phonenumber",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%phonenumber%,at,can,me,reach,you": {
-            "intent": "identify.phonenumber",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%phonenumber%,contact,me,on": {
-            "intent": "identify.phonenumber",
+            "intent": "quote.request",
             "domain": "default"
           },
           "%phonenumber%,at,out,reach": {
-            "intent": "identify.phonenumber",
+            "intent": "quote.request",
             "domain": "default"
           }
         },
         "intentDict": {
-          "quote.request": "default",
-          "delivery.restriction": "default",
-          "identify.phonenumber": "default"
+          "quote.request": "default"
         },
         "sentences": [
           {
@@ -165,62 +163,62 @@
           {
             "domain": "default",
             "utterance": "We need the items delivered by %delivery_date%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Please ensure delivery by %delivery_date%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Delivery should be done by %delivery_date%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Can you deliver the items by %delivery_date%?",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "I need the items delivered to %delivery_location%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Please ship the items to %delivery_location%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "The items should be sent to %delivery_location%",
-            "intent": "delivery.restriction"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "My phone number is %phonenumber%",
-            "intent": "identify.phonenumber"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Call me at %phonenumber%",
-            "intent": "identify.phonenumber"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "You can reach me at %phonenumber%",
-            "intent": "identify.phonenumber"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Contact me on %phonenumber%",
-            "intent": "identify.phonenumber"
+            "intent": "quote.request"
           },
           {
             "domain": "default",
             "utterance": "Reach out at %phonenumber%",
-            "intent": "identify.phonenumber"
+            "intent": "quote.request"
           }
         ],
         "domains": {
@@ -293,9 +291,7 @@
               "out": 1
             },
             "intents": {
-              "quote.request": 1,
-              "delivery.restriction": 1,
-              "identify.phonenumber": 1
+              "quote.request": 1
             },
             "intentFeatures": {
               "quote.request": {
@@ -329,41 +325,26 @@
                 "like": 1,
                 "to": 1,
                 "get": 1,
-                "inform": 1
-              },
-              "delivery.restriction": {
+                "inform": 1,
                 "we": 1,
-                "need": 1,
                 "the": 1,
                 "item": 1,
                 "deliv": 1,
                 "by": 1,
                 "%delivery_date%": 1,
-                "pleas": 1,
                 "ensur": 1,
                 "deliveri": 1,
                 "should": 1,
                 "be": 1,
                 "done": 1,
-                "can": 1,
-                "you": 1,
-                "i": 1,
-                "to": 1,
                 "%delivery_location%": 1,
                 "ship": 1,
-                "sent": 1
-              },
-              "identify.phonenumber": {
-                "my": 1,
+                "sent": 1,
                 "phone": 1,
                 "number": 1,
-                "is": 1,
                 "%phonenumber%": 1,
                 "call": 1,
-                "me": 1,
                 "at": 1,
-                "you": 1,
-                "can": 1,
                 "reach": 1,
                 "contact": 1,
                 "on": 1,
@@ -375,15 +356,13 @@
                 "quote.request"
               ],
               "my": [
-                "quote.request",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "name": [
                 "quote.request"
               ],
               "is": [
-                "quote.request",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "%name%": [
                 "quote.request"
@@ -392,12 +371,10 @@
                 "quote.request"
               ],
               "i": [
-                "quote.request",
-                "delivery.restriction"
+                "quote.request"
               ],
               "need": [
-                "quote.request",
-                "delivery.restriction"
+                "quote.request"
               ],
               "a": [
                 "quote.request"
@@ -424,14 +401,10 @@
                 "quote.request"
               ],
               "can": [
-                "quote.request",
-                "delivery.restriction",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "you": [
-                "quote.request",
-                "delivery.restriction",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "provid": [
                 "quote.request"
@@ -449,15 +422,13 @@
                 "quote.request"
               ],
               "pleas": [
-                "quote.request",
-                "delivery.restriction"
+                "quote.request"
               ],
               "give": [
                 "quote.request"
               ],
               "me": [
-                "quote.request",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "would": [
                 "quote.request"
@@ -466,8 +437,7 @@
                 "quote.request"
               ],
               "to": [
-                "quote.request",
-                "delivery.restriction"
+                "quote.request"
               ],
               "get": [
                 "quote.request"
@@ -476,73 +446,73 @@
                 "quote.request"
               ],
               "we": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "the": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "item": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "deliv": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "by": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "%delivery_date%": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "ensur": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "deliveri": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "should": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "be": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "done": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "%delivery_location%": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "ship": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "sent": [
-                "delivery.restriction"
+                "quote.request"
               ],
               "phone": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "number": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "%phonenumber%": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "call": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "at": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "reach": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "contact": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "on": [
-                "identify.phonenumber"
+                "quote.request"
               ],
               "out": [
-                "identify.phonenumber"
+                "quote.request"
               ]
             },
             "neuralNetwork": {
@@ -614,181 +584,65 @@
                 "out"
               ],
               "intents": [
-                "quote.request",
-                "delivery.restriction",
-                "identify.phonenumber"
+                "quote.request"
               ],
               "perceptrons": [
                 [
-                  -0.7164543271064758,
-                  -0.09704376012086868,
-                  0.2284170687198639,
-                  0.06235376372933388,
-                  0.4658184349536896,
-                  0.16672790050506592,
-                  0.8362257480621338,
-                  0.6712814569473267,
-                  0.4189058840274811,
-                  1.9276586771011353,
-                  1.1781104803085327,
-                  2.8469645977020264,
-                  2.8469645977020264,
-                  2.8469645977020264,
-                  0.1617652177810669,
-                  0.1617652177810669,
-                  0.8892205357551575,
-                  0.8892205357551575,
-                  0.1617652177810669,
-                  0.9159966111183167,
-                  -0.031632211059331894,
-                  -0.031632211059331894,
-                  0.08097957074642181,
-                  -0.25948241353034973,
-                  -0.031632211059331894,
-                  0.7025962471961975,
-                  0.11499936878681183,
-                  0.11499936878681183,
-                  -0.1513267606496811,
-                  0.11499936878681183,
-                  0.7532118558883667,
-                  -0.042884115129709244,
-                  -0.554773211479187,
-                  -0.554773211479187,
-                  -0.46927616000175476,
-                  -0.4493362009525299,
-                  -0.4493362009525299,
-                  -0.10090603679418564,
-                  -0.15953484177589417,
-                  -0.0294186994433403,
-                  -0.0294186994433403,
-                  -0.0294186994433403,
-                  -0.25893619656562805,
-                  -0.06161646544933319,
-                  0,
-                  -0.3009067177772522,
-                  -0.3009067177772522,
-                  -1.2514193058013916,
-                  -0.08813971281051636,
-                  -0.8454122543334961,
-                  -0.7217528223991394,
-                  -0.05643186345696449,
-                  -0.05643186345696449,
-                  0,
-                  0.41256337136803567
-                ],
-                [
-                  -0.12306775152683258,
-                  -0.38730406761169434,
-                  -0.12306775152683258,
-                  -0.5600187182426453,
-                  -0.6201311349868774,
-                  -0.3164016008377075,
-                  0.8402466773986816,
-                  0.6658027768135071,
-                  -0.6349233984947205,
-                  -0.4645034670829773,
-                  -0.6349233984947205,
-                  -0.6349233984947205,
-                  -0.6349233984947205,
-                  -0.6349233984947205,
-                  -0.08558578789234161,
-                  -0.08558578789234161,
-                  0.11450904607772827,
-                  0.11450904607772827,
-                  -0.08558578789234161,
-                  -0.08558578789234161,
-                  -0.06739703565835953,
-                  -0.06739703565835953,
-                  -0.21201901137828827,
-                  2.25184965133667,
-                  -0.06739703565835953,
-                  -0.7290709614753723,
-                  -0.08564957231283188,
-                  -0.08564957231283188,
-                  2.222182512283325,
-                  -0.08564957231283188,
-                  0,
-                  -0.4070799648761749,
-                  2.4729347229003906,
-                  2.4729347229003906,
-                  1.473583698272705,
-                  2.916896104812622,
-                  2.916896104812622,
-                  1.6349797248840332,
-                  2.765118360519409,
-                  1.377536654472351,
-                  1.377536654472351,
-                  1.1295589208602905,
-                  2.3211371898651123,
-                  0.7517224550247192,
-                  0.2478267401456833,
-                  -0.17556436359882355,
-                  -0.17556436359882355,
-                  -0.967373788356781,
-                  -0.1543598771095276,
-                  -0.5623040199279785,
-                  -0.3438810110092163,
-                  -0.10726561397314072,
-                  -0.10726561397314072,
-                  -0.08147653937339783,
-                  1.7988595942241157
-                ],
-                [
-                  -0.08413995802402496,
-                  1.1196093559265137,
-                  -0.6874487400054932,
-                  0.9265246987342834,
-                  -1.124515175819397,
-                  -0.08413995802402496,
-                  -0.3753845989704132,
-                  -0.28573036193847656,
-                  -0.49675503373146057,
-                  -0.9322816729545593,
-                  -0.49675503373146057,
-                  -1.124515175819397,
-                  -1.124515175819397,
-                  -1.124515175819397,
-                  -0.09654230624437332,
-                  -0.09654230624437332,
-                  -0.4826357364654541,
-                  -0.4826357364654541,
-                  -0.09654230624437332,
-                  -0.09654230624437332,
-                  -0.17004357278347015,
-                  -0.17004357278347015,
-                  -0.17004357278347015,
-                  -0.5009332895278931,
-                  -0.17004357278347015,
-                  2.298189640045166,
-                  0,
-                  0,
-                  -0.23134589195251465,
-                  0,
-                  0,
-                  -0.09131037443876266,
-                  -0.5553435683250427,
-                  -0.5553435683250427,
-                  -0.31299713253974915,
-                  -0.6301990747451782,
-                  -0.6301990747451782,
-                  -0.13506117463111877,
-                  -0.30525243282318115,
-                  -0.24222426116466522,
-                  -0.24222426116466522,
-                  -0.1353641301393509,
-                  -0.23134589195251465,
-                  -0.0964861661195755,
-                  -0.08918417245149612,
-                  1.8892347812652588,
-                  1.8892347812652588,
-                  6.332277774810791,
-                  0.8683518767356873,
-                  2.6830973625183105,
-                  1.8174982070922852,
-                  1.7587013244628906,
-                  1.7587013244628906,
-                  1.3044638633728027,
-                  2.1291074210504077
+                  -0.3440154194831848,
+                  0.6811277270317078,
+                  -0.7358824014663696,
+                  1.0550287961959839,
+                  -0.6990247368812561,
+                  0.0982314869761467,
+                  0.7853353023529053,
+                  0.926469087600708,
+                  0.335849791765213,
+                  1.0506349802017212,
+                  0.680072009563446,
+                  1.7688941955566406,
+                  1.7688941955566406,
+                  1.7688941955566406,
+                  0.3733350932598114,
+                  0.3733350932598114,
+                  0.335700124502182,
+                  0.335700124502182,
+                  0.3733350932598114,
+                  0.7173413634300232,
+                  -0.42970922589302063,
+                  -0.42970922589302063,
+                  -0.33569636940956116,
+                  1.6236062049865723,
+                  -0.42970922589302063,
+                  1.7147890329360962,
+                  0.09449273347854614,
+                  0.09449273347854614,
+                  1.6835607290267944,
+                  0.09449273347854614,
+                  0.3431880474090576,
+                  -0.19271570444107056,
+                  1.7635538578033447,
+                  1.7635538578033447,
+                  0.6512797474861145,
+                  2.171456813812256,
+                  2.171456813812256,
+                  1.2482199668884277,
+                  1.999692678451538,
+                  1.0577946901321411,
+                  1.0577946901321411,
+                  0.7513471245765686,
+                  1.5911670923233032,
+                  0.8057217001914978,
+                  0.30667656660079956,
+                  1.4206151962280273,
+                  1.4206151962280273,
+                  4.608569145202637,
+                  1.1018662452697754,
+                  1.7386773824691772,
+                  0.6334845423698425,
+                  1.449586272239685,
+                  1.449586272239685,
+                  2.1279733180999756,
+                  5.072529916851486
                 ]
               ]
             }
@@ -1076,25 +930,21 @@
         "entity": "item",
         "mandatory": false,
         "locales": {}
-      }
-    },
-    "delivery.restriction": {
+      },
       "delivery_date": {
-        "intent": "delivery.restriction",
+        "intent": "quote.request",
         "entity": "delivery_date",
         "mandatory": false,
         "locales": {}
       },
       "delivery_location": {
-        "intent": "delivery.restriction",
+        "intent": "quote.request",
         "entity": "delivery_location",
         "mandatory": false,
         "locales": {}
-      }
-    },
-    "identify.phonenumber": {
+      },
       "phonenumber": {
-        "intent": "identify.phonenumber",
+        "intent": "quote.request",
         "entity": "phonenumber",
         "mandatory": false,
         "locales": {}

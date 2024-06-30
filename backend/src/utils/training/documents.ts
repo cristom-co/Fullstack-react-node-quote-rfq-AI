@@ -44,37 +44,37 @@ export default [
   [
     "en",
     "We need the items delivered by %delivery_date%",
-    "delivery.restriction",
+    "quote.request",
   ],
-  ["en", "Please ensure delivery by %delivery_date%", "delivery.restriction"],
-  ["en", "Delivery should be done by %delivery_date%", "delivery.restriction"],
+  ["en", "Please ensure delivery by %delivery_date%", "quote.request"],
+  ["en", "Delivery should be done by %delivery_date%", "quote.request"],
   [
     "en",
     "Can you deliver the items by %delivery_date%?",
-    "delivery.restriction",
+    "quote.request",
   ],
 
   // delivery location
   [
     "en",
     "I need the items delivered to %delivery_location%",
-    "delivery.restriction",
+    "quote.request",
   ],
   [
     "en",
     "Please ship the items to %delivery_location%",
-    "delivery.restriction",
+    "quote.request",
   ],
   [
     "en",
     "The items should be sent to %delivery_location%",
-    "delivery.restriction",
+    "quote.request",
   ],
 
   //Phone number
-  ["en", "My phone number is %phonenumber%", "identify.phonenumber"],
-  ["en", "Call me at %phonenumber%", "identify.phonenumber"],
-  ["en", "You can reach me at %phonenumber%", "identify.phonenumber"],
-  ["en", "Contact me on %phonenumber%", "identify.phonenumber"],
-  ["en", "Reach out at %phonenumber%", "identify.phonenumber"],
+  ["en", "My phone number is %phonenumber%", "quote.request"],
+  ["en", "Call me at %phonenumber%", "quote.request"],
+  ["en", "You can reach me at %phonenumber%", "quote.request"],
+  ["en", "Contact me on %phonenumber%", "quote.request"],
+  ["en", "Reach out at %phonenumber%", "quote.request"],
 ];
