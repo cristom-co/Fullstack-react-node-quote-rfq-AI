@@ -10,3 +10,11 @@ export interface IQuotes {
     createdAt: string;
     updatedAt: string;
   }
+
+
+  export interface StoreState {
+    //states
+    listQuotes: IQuotes[] 
+    //actions
+    updateListQuoutes: (qoutes: IQuotes[]) => void
+  }

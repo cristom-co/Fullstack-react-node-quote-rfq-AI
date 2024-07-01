@@ -21,12 +21,13 @@ export const handleRfq = async (req: Request, res: Response) => {
       //valid if the product exists
       const currentProducts = await findProductIfExist(products)
       //store quote
-      await createQoute(client, currentProducts);
+      createQoute(client, currentProducts).then(() => {
+        res
+          .status(200)
+          .json({ message: "RFQ processed successfully", client, products });
+      });
      });
 
-    res
-      .status(200)
-      .json({ message: "RFQ processed successfully", client, products });
   } else {
     res.status(500).json({ message: "Error processing RFQs" });
   }
