@@ -42,3 +42,9 @@ cd cotizacion-rfq
 ```bash
 docker-compose up --build
 ```
+
+
+## Screenshots
+
+![alt text](./frontend/public/Quotes-List.png)
+
